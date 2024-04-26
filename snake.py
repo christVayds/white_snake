@@ -20,9 +20,12 @@ class Snake(pygame.sprite.Sprite):
         self.scores = [5, 7, 10, 12, 15, 17, 18, 22]
 
     def update(self, screen):
+
+        # check for collision in body
         for body in self.body:
             if self.head.x == body.x and self.head.y == body.y:
                 self.dead = True
+                print(f"Score: {self.score}")
 
         self.body.append(self.head)
         for body in range(len(self.body)-1):
@@ -68,8 +71,10 @@ class Snake(pygame.sprite.Sprite):
             self.score += 1
         if self.head.x < 0 or self.head.x >= 750:
             self.dead = True
+            print(f"Score: {self.score}")
         elif self.head.y < 0 or self.head.y > 550:
             self.dead = True
+            print(f"Score: {self.score}")
 
     def add(self):
         self.body.append(pygame.Rect(self.body[-1].x, self.body[-1].y, self.width, self.height))
