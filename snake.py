@@ -74,12 +74,6 @@ class Snake(pygame.sprite.Sprite):
     def add(self):
         self.body.append(pygame.Rect(self.body[-1].x, self.body[-1].y, self.width, self.height))
 
-    def addLevel(self):
-        if self.score in self.scores:
-            self.scores.remove(self.score)
-            return 1
-        return 0
-
 class Food(pygame.sprite.Sprite):
 
     def __init__(self, width, height):

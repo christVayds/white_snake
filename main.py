@@ -19,7 +19,6 @@ food = Food(25, 25)
 font = pygame.font.SysFont('comicsansms', 20)
 
 def draw():
-    global fps
 
     screen.fill((54, 54, 54))
     text = font.render(f'Score: {snake.score}', True, (255,255,255))
@@ -31,7 +30,6 @@ def draw():
         snake.move()
         snake.update(screen)
         snake.handleCollision(food)
-        fps += snake.addLevel()
     else:
         return False
 
