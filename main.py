@@ -6,7 +6,7 @@ pygame.init()
 # screen
 windowsScreen = {'width': 750, 'height': 570}
 screen = pygame.display.set_mode((windowsScreen['width'], windowsScreen['height']))
-pygame.display.set_caption('White Snake')
+pygame.display.set_caption('White Python')
 
 # clock
 clock = pygame.time.Clock()
